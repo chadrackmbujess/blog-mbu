@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etude PSAU</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Etude PSAU - Une analyse approfondie sur le PSAU, avec des informations clés, des recherches et des conclusions pertinentes.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="PSAU, étude, analyse, recherche, conclusions, informations clés">
+
+    <!-- Meta Author -->
+    <meta name="author" content="Nom de l'auteur ou de l'organisation">
+
+    <!-- Meta Robots (pour indiquer aux moteurs de recherche d'indexer la page) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta (pour améliorer le partage sur les réseaux sociaux) -->
+    <meta property="og:title" content="Etude PSAU" />
+    <meta property="og:description" content="Une analyse approfondie sur le PSAU, avec des informations clés et des conclusions pertinentes." />
+    <meta property="og:image" content="{% static 'images/logo mbujess.png' %}" />
+    <meta property="og:url" content="https://chadrackmbujess.github.io/portfolio" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta (pour le partage sur Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Etude PSAU">
+    <meta name="twitter:description" content="Une analyse approfondie sur le PSAU, avec des informations clés et des conclusions pertinentes.">
+    <meta name="twitter:image" content="{% static 'images/etude-psau.jpg' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/logo mbujess.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}
+    <!-- Contenu de la page -->
+    {% endblock %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
